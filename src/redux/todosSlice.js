@@ -12,12 +12,14 @@ const initialState={
 }
 //configuración de la porción del slice
 
+
 export const userSlice =createSlice({
-    name:"tasks", //siempre tiene que ser name para crear un Slice
+    name:"task", //siempre tiene que ser name para crear un Slice
     initialState,
     reducers:{
         addTask:(state,action)=>{
-            state.tasks.push= action.payload;
+            //state.tasks.push(action.payload);
+            state.tasks.push({ text: action.payload, completed: false }); 
         },
         deleteTask: (state, action)=>{//cambio de estado en diferentes componentes
             state.tasks= state.tasks.filter(task => task.id !==action.payload);
@@ -27,3 +29,5 @@ export const userSlice =createSlice({
 
     export const{addTask, deleteTask}=userSlice.actions
     export default userSlice.reducer;
+
+

@@ -20,3 +20,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 //En el archivo principal de tu aplicación `main.jsx`, importa el store de Redux desde `store.js`.
 //Envuelve tu aplicación con el componente `Provider` de Redux, pasándole el store como prop.
 // Utiliza el componente `App.jsx` en tu aplicación para mostrar la lista de tareas.
+

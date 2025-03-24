@@ -1,7 +1,6 @@
 //6 creamos los componentes
 
 //import { useSelector } from 'react-redux';
-//import  AddTask from './components/AddTask';
 import Task from './components/Task';
 
 const App = () => {
@@ -15,10 +14,11 @@ const App = () => {
   setTasks([...state.tasks, newTask]); // Agregamos la nueva tarea al estado de tasks que era donde tenía 3 tareas creadas
 } 
 
-
   return (
     <>
-      <Task addNewTask={addNewTask}/>
+      <Task 
+      addNewTask={addNewTask}/>
+
     </>
   );
 };
