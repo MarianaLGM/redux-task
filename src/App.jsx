@@ -1,6 +1,5 @@
 //6 creamos los componentes
 
-//import { useSelector } from 'react-redux';
 import Task from './components/Task';
 
 const App = () => {
@@ -16,8 +15,7 @@ const App = () => {
 
   return (
     <>
-      <Task 
-      addNewTask={addNewTask}/>
+      <Task addNewTask={addNewTask}/>
 
     </>
   );
