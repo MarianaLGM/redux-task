@@ -20,7 +20,7 @@ function Task() {
         e.preventDefault();
         if (newTask.trim()) {
             dispatch(addTask(newTask));  // Despacha la acción para agregar la tarea
-            //setNewTask('');  // Limpia el campo después de agregar la tarea
+            setNewTask('');  // Limpia el campo después de agregar la tarea
         }
     };
 
