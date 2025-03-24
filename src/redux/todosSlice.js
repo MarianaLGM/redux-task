@@ -8,7 +8,8 @@ import {createSlice} from "@reduxjs/toolkit"
 //estado inicial, como hacíamos con el useState
 
 const initialState={
-    tasks: []
+    tasks: [],
+    taskId: 0, //parte en cero y se va sumando uno conforme añadimos taask
 }
 //configuración de la porción del slice
 
@@ -18,8 +19,8 @@ export const userSlice =createSlice({
     initialState,
     reducers:{
         addTask:(state,action)=>{
-            //state.tasks.push(action.payload);
-            state.tasks.push({ text: action.payload, completed: false }); 
+            state.taskId += 1;  // Incrementa el ID de cada tarea en 1
+            state.tasks.push({ text: action.payload, id: state.taskId }); 
         },
         deleteTask: (state, action)=>{//cambio de estado en diferentes componentes
             state.tasks= state.tasks.filter(task => task.id !==action.payload);

@@ -26,7 +26,7 @@ function Task() {
 
     //ELIMINAR
     const handleDelete = (id) => {
-        dispatch(deleteTask(id));  // Despacha la acción para eliminar la tarea por id
+        dispatch(deleteTask(id));  // Despacha accción para eliminar la tarea por su id
     };
 
 
@@ -46,8 +46,8 @@ function Task() {
         <ul>
             {tasks.map((task) => (
                 <li key={task.id}>
-                    {task.text} 
-                    <button onClick={() => handleDelete(task.id)}>X</button>
+                    {task.text} {/*me muestra la tarea que meto en el input*/}
+                    <button onClick={() => handleDelete(task.id)}>X</button>{/*X al lado de cada tarea para eliminar*/}
                 </li>
             ))}
         </ul>
