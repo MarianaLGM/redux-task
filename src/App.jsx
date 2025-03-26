@@ -22,30 +22,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-//comprobar que tengamos instalado "react-redux" y "@reduxjs/toolkit"
-//Haz que se que muestre la lista de tareas en `App.jsx`.
-//2. Importa las acciones necesarias desde `todoSlice.js`.
-//3. Conecta el componente `App.jsx` al estado y a las acciones de Redux.
-
-
-/*OK 
-
-import { useSelector } from 'react-redux';
-
-const App = () => {
-  const task = useSelector((state) => state.task);
-  return (
-    <>
-      <h1>Lista de tareas</h1>
-      <ul>
-        <li>Title: {task.title}</li>
-      </ul>
-    </>
-  );
-};
-
-export default App;
-*/
